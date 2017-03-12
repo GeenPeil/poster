@@ -47,7 +47,24 @@
     <link rel='stylesheet' id='slick-carousel-css-css'  href='https://geenpeil.nl/wp-content/themes/geenpeil/assets/components/slick-carousel/slick/slick.css?ver=4.7.2' type='text/css' media='all' />
     <link rel='stylesheet' id='stylesheet-css'  href='https://geenpeil.nl/wp-content/themes/geenpeil/style.css?ver=49' type='text/css' media='' />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
+    <?php
+    if(count($_GET))
+    {
+    ?>
+    <meta property="og:image" content="https://poster.geenpeil.nl/poster/<?=base64_decode(urldecode(key($_GET)))?>.jpg" />
+    <meta property="og:title" content="Poster" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://poster.geenpeil.nl/?<?=urlencode(htmlspecialchars(key($_GET), ENT_QUOTES))?>" />
+    <meta property="og:description" content="<?=htmlspecialchars(str_replace("-", " ", str_replace("--", " ", base64_decode(urldecode(key($_GET))))))?>" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@GeenPeil">
+    <meta name="twitter:creator" content="@GeenPeil">
+    <meta name="twitter:title" content="Poster">
+    <meta name="twitter:description" content="<?=htmlspecialchars(str_replace("-", " ", str_replace("--", " ", base64_decode(urldecode(key($_GET))))))?>">
+    <meta name="twitter:image" content="https://poster.geenpeil.nl/poster/<?=base64_decode(urldecode(key($_GET)))?>.jpg" />
+    <?php
+    }
+    ?>
   </head>
   <body>
     <div class="navigation navigation--mobile">
