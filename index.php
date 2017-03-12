@@ -47,7 +47,7 @@
     <link rel='stylesheet' id='slick-carousel-css-css'  href='https://geenpeil.nl/wp-content/themes/geenpeil/assets/components/slick-carousel/slick/slick.css?ver=4.7.2' type='text/css' media='all' />
     <link rel='stylesheet' id='stylesheet-css'  href='https://geenpeil.nl/wp-content/themes/geenpeil/style.css?ver=49' type='text/css' media='' />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
+    <?=(count($_GET) ? "<meta property=\"og:image\" content=\"https://poster.geenpeil.nl/poster/".base64_decode(urldecode(key($_GET))).".jpg\" />" : "")?>
   </head>
   <body>
     <div class="navigation navigation--mobile">
