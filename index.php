@@ -46,7 +46,7 @@
     <link rel='stylesheet' id='mmenu.positioning-css'  href='https://geenpeil.nl/wp-content/themes/geenpeil/assets/components/jQuery.mmenu/dist/extensions/positioning/jquery.mmenu.positioning.css?ver=4.7.2' type='text/css' media='all' />
     <link rel='stylesheet' id='slick-carousel-css-css'  href='https://geenpeil.nl/wp-content/themes/geenpeil/assets/components/slick-carousel/slick/slick.css?ver=4.7.2' type='text/css' media='all' />
     <link rel='stylesheet' id='stylesheet-css'  href='https://geenpeil.nl/wp-content/themes/geenpeil/style.css?ver=49' type='text/css' media='' />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
   </head>
   <body>
@@ -94,7 +94,7 @@
                   <div style="margin-top: 15px; " class="social">
                     <h3>Deze poster delen? Dat mag.</h4>
                     <div style="text-align: center;">
-                      <a href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fwijwel.geenpeil.nl%2F%3F<?=urlencode(htmlspecialchars(key($_GET), ENT_QUOTES))?>" target="_blank" id="soc_fb"><img src="https://mijnstempakket.geenpeil.nl/icon-facebook.png" alt="Deel deze poster op Facebook!" width="64" height="64"></a>
+                      <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwijwel.geenpeil.nl%2F%3F<?=urlencode(htmlspecialchars(key($_GET), ENT_QUOTES))?>" target="_blank" id="soc_fb"><img src="https://mijnstempakket.geenpeil.nl/icon-facebook.png" alt="Deel deze poster op Facebook!" width="64" height="64"></a>
                       <a style="margin-left: 10px;" href="https://twitter.com/intent/tweet/?hashtags=GeenPeil,WijWel&amp;url=https%3A%2F%2Fwijwel.geenpeil.nl%2F%3F<?=urlencode(htmlspecialchars(key($_GET), ENT_QUOTES))?>&amp;text=Mijn%20poster" target="_blank" id="soc_tw"><img src="https://mijnstempakket.geenpeil.nl/icon-twitter.png" alt="Deel deze poster op Twitter!" width="64" height="64"></a>
                     </div>
                   </div>
@@ -131,7 +131,7 @@
     {
       document.getElementById('renderDiv').innerHTML = "<img src=\"img/ajax-loader.gif\" /><div id=\"base64str\" style=\"display:none;\"></div>";
       $( "#base64str" ).load( "render.php?t="+encodeURI(document.getElementById('slogan').value), function() {
-        document.getElementById('renderDiv').innerHTML = "<h3>Klaar! Wil je 'm opslaan?</h3><img src=\"data:image/jpeg;base64,"+document.getElementById('base64str').innerHTML+"\" /><br /><br /><h3>Delen mag ook! Is gratis.</h4><div style=\"text-align: center;\"><a href=\"http://www.facebook.com/sharer.php?u=https%3A%2F%2Fwijwel.geenpeil.nl%2F%3F"+encodeURI(btoa(document.getElementById('slogan').value.replace("\n", "--").replace(" ", "-")))+"\" target=\"_blank\" id=\"soc_fb\"><img src=\"https://mijnstempakket.geenpeil.nl/icon-facebook.png\" alt=\"Deel deze poster op Facebook!\" width=\"64\" height=\"64\"></a><a style=\"margin-left: 10px;\" href=\"https://twitter.com/intent/tweet/?hashtags=GeenPeil,WijWel&amp;url=https%3A%2F%2Fwijwel.geenpeil.nl%2F%3F"+encodeURI(btoa(document.getElementById('slogan').value.replace("\n", "--").replace(" ", "-")))+"&amp;text=Mijn%20poster\" target=\"_blank\" id=\"soc_tw\"><img src=\"https://mijnstempakket.geenpeil.nl/icon-twitter.png\" alt=\"Deel deze poster op Twitter!\" width=\"64\" height=\"64\"></a></div></div>";
+        document.getElementById('renderDiv').innerHTML = "<h3>Klaar! Wil je 'm opslaan?</h3><img src=\"data:image/jpeg;base64,"+document.getElementById('base64str').innerHTML+"\" /><br /><br /><h3>Delen mag ook! Is gratis.</h4><div style=\"text-align: center;\"><a href=\"https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwijwel.geenpeil.nl%2F%3F"+encodeURI(btoa(document.getElementById('slogan').value.replace("\n", "--").replace(" ", "-")))+"\" target=\"_blank\" id=\"soc_fb\"><img src=\"https://mijnstempakket.geenpeil.nl/icon-facebook.png\" alt=\"Deel deze poster op Facebook!\" width=\"64\" height=\"64\"></a><a style=\"margin-left: 10px;\" href=\"https://twitter.com/intent/tweet/?hashtags=GeenPeil,WijWel&amp;url=https%3A%2F%2Fwijwel.geenpeil.nl%2F%3F"+encodeURI(btoa(document.getElementById('slogan').value.replace("\n", "--").replace(" ", "-")))+"&amp;text=Mijn%20poster\" target=\"_blank\" id=\"soc_tw\"><img src=\"https://mijnstempakket.geenpeil.nl/icon-twitter.png\" alt=\"Deel deze poster op Twitter!\" width=\"64\" height=\"64\"></a></div></div>";
       });
     }
     </script>
