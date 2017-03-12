@@ -1,2 +1,2 @@
 RewriteEngine On
-RewriteRule ^poster/([^/]*)\.jpg$ render.php?t=$1&d [L]
+RewriteRule ^poster/([^/]*)\.jpg$ ./render.php?t=$1&d [L]
