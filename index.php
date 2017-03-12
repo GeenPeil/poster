@@ -51,7 +51,7 @@
     if(count($_GET))
     {
     ?>
-    <meta property="og:image" content="https://poster.geenpeil.nl/poster/<?=base64_decode(urldecode(key($_GET)))?>.jpg" />
+    <meta property="og:image" content="https://poster.geenpeil.nl/poster/<?=htmlspecialchars(base64_decode(urldecode(key($_GET))), ENT_QUOTES)?>.jpg" />
     <meta property="og:title" content="Poster" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://poster.geenpeil.nl/?<?=urlencode(htmlspecialchars(key($_GET), ENT_QUOTES))?>" />
@@ -61,7 +61,7 @@
     <meta name="twitter:creator" content="@GeenPeil">
     <meta name="twitter:title" content="Poster">
     <meta name="twitter:description" content="<?=htmlspecialchars(str_replace("-", " ", str_replace("--", " ", base64_decode(urldecode(key($_GET))))))?>">
-    <meta name="twitter:image" content="https://poster.geenpeil.nl/poster/<?=base64_decode(urldecode(key($_GET)))?>.jpg" />
+    <meta name="twitter:image" content="https://poster.geenpeil.nl/poster/<?=htmlspecialchars(base64_decode(urldecode(key($_GET))), ENT_QUOTES)?>.jpg" />
     <?php
     }
     ?>
